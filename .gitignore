@@ -1,0 +1,174 @@
+# ------------------------------------------------------------------------------
+# Compilación y Resultados (Build Results)
+# ------------------------------------------------------------------------------
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+artifacts/
+PublishProfiles/
+publish/
+*.PublishSettings
+
+# ------------------------------------------------------------------------------
+# Entornos de Desarrollo (IDEs)
+# ------------------------------------------------------------------------------
+# Visual Studio
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+*.vsp
+*.vspx
+*.sap
+*.psess
+*.dbmdl
+*.jfm
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/tasks.json
+!.vscode/launch.json
+*.code-workspace
+.vscode-test/
+
+# JetBrains Rider / IntelliJ
+.idea/
+*.sln.iml
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# ------------------------------------------------------------------------------
+# Paquetes y Dependencias
+# ------------------------------------------------------------------------------
+# NuGet
+*.nupkg
+*.snupkg
+*.nuget.props
+*.nuget.targets
+.nuget/
+
+# Front-end (Si usas MVC, Razor Pages o SPA integradas)
+node_modules/
+jspm_packages/
+.npm/
+
+# ------------------------------------------------------------------------------
+# Pruebas y Cobertura (Testing & Coverage)
+# ------------------------------------------------------------------------------
+TestResults/
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.binlog
+
+# Herramientas de Cobertura
+OpenCover/
+coverage.xml
+coverage/
+*.coverage
+*.coveragexml
+.dotCover/
+.axoCover/*
+.nyc_output/
+
+# ------------------------------------------------------------------------------
+# Configuración, Entorno Local y Secretos (Seguridad)
+# ------------------------------------------------------------------------------
+# ¡IMPORTANTE! No subas secretos. Usa 'dotnet user-secrets' localmente.
+secrets.json
+local.settings.json
+.env
+.env.local
+.env.*.local
+*.local.*
+*.config.local
+appsettings.Production.json
+
+# Certificados locales
+*.pfx
+*.pem
+*.cer
+*.crt
+*.key
+
+# Azure Pubxml
+*.azurePubxml
+
+# BenchmarkDotNet
+BenchmarkDotNet.Artifacts/
+
+# Herramienta dotnet-watch
+.dotnet-suggest-sentinel-*
+
+# ------------------------------------------------------------------------------
+# Logs, Temporales y Caché
+# ------------------------------------------------------------------------------
+[Ll]og/
+[Ll]ogs/
+*.log
+npm-debug.log*
+npm-error.log*
+tye-debug.log
+
+tmp/
+temp/
+*.tmp
+*.bak
+*.backup
+*.swp
+*.swo
+*~
+
+# ------------------------------------------------------------------------------
+# Bases de Datos Locales
+# ------------------------------------------------------------------------------
+healthchecksdb
+*.db
+*.mdb
+*.sqlite
+*.sqlite3
+*.ldf
+*.mdf
+
+# ------------------------------------------------------------------------------
+# Docker, Kubernetes y Herramientas Cloud (.NET Aspire / Tye)
+# ------------------------------------------------------------------------------
+docker-compose.override.yml
+.kube/
+.tye/
+.aspire/
+
+# ------------------------------------------------------------------------------
+# Archivos del Sistema Operativo
+# ------------------------------------------------------------------------------
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.AppleDouble
+.LSOverride
+
+# Linux
+.directory
+.Trash-*
