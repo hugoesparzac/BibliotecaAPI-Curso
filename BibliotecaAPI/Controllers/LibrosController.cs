@@ -15,7 +15,7 @@ namespace BibliotecaAPI.Controllers
             return await context.Libros.ToListAsync();
         }
 
-        [HttpGet("{id:int}")]
+        [HttpGet("{id:int}", Name = "ObtenerLibro")]
         public async Task<ActionResult<Libro>> Get(int id)
         {
             var libro = await context.Libros.Include(x => x.Autor).FirstOrDefaultAsync(x => x.Id == id);
@@ -32,11 +32,12 @@ namespace BibliotecaAPI.Controllers
             var existeAutor = await context.Autores.AnyAsync(x => x.Id == libro.AutorId);
             if (!existeAutor)
             {
-                return BadRequest($"El autor de id {libro.AutorId} no existe");
+                ModelState.AddModelError(nameof(libro.AutorId), $"El autor de id {libro.AutorId} no existe");
+                return ValidationProblem();
             }
             context.Add(libro);
             await context.SaveChangesAsync();
-            return Ok();
+            return CreatedAtRoute("ObtenerLibro", new { id = libro.Id }, libro);
         }
 
         [HttpPut("{id:int}")]

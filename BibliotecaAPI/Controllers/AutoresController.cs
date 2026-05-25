@@ -15,7 +15,13 @@ namespace BibliotecaAPI.Controllers
             return await context.Autores.ToListAsync();
         }
 
-        [HttpGet("{id:int}")]
+        [HttpGet("primero")]
+        public async Task<Autor> GetPrimerAutor()
+        {
+            return await context.Autores.FirstAsync();
+        }
+
+        [HttpGet("{id:int}", Name = "ObtenerAutor")]
         public async Task<ActionResult<Autor>> Get(int id)
         {
             var autor = await context.Autores.Include(x => x.Libros).FirstOrDefaultAsync(x => x.Id == id);
@@ -31,7 +37,7 @@ namespace BibliotecaAPI.Controllers
         {
             context.Add(autor);
             await context.SaveChangesAsync();
-            return Ok();
+            return CreatedAtRoute("ObtenerAutor", new { id = autor.Id }, autor);
         }
 
         [HttpPut("{id:int}")]
